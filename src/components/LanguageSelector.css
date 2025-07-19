@@ -1,0 +1,189 @@
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.language-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(138, 43, 226, 0.5);
+}
+
+.flag {
+  width: 20px;
+  height: 15px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.lang-name {
+  font-weight: 500;
+}
+
+.arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 5px;
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  min-width: 150px;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  color: #cccccc;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.language-option:hover {
+  background: rgba(138, 43, 226, 0.2);
+  color: #ffffff;
+}
+
+.language-option.active {
+  background: rgba(138, 43, 226, 0.3);
+  color: #ffffff;
+}
+
+.language-option:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.language-option:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+@media (max-width: 768px) {
+  .language-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+  
+  .lang-name {
+    display: none;
+  }
+
+  .flag {
+    width: 18px;
+    height: 14px;
+  }
+
+  .arrow {
+    font-size: 0.7rem;
+  }
+  
+  .language-dropdown {
+    right: -10px;
+    min-width: 140px;
+  }
+
+  .language-option {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    gap: 8px;
+  }
+
+  .language-option .flag {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-button {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+
+  .flag {
+    width: 16px;
+    height: 12px;
+  }
+
+  .arrow {
+    font-size: 0.65rem;
+  }
+
+  .language-dropdown {
+    right: -15px;
+    min-width: 130px;
+    margin-top: 3px;
+  }
+
+  .language-option {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+
+  .language-option .flag {
+    width: 14px;
+    height: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .language-button {
+    padding: 4px 6px;
+    gap: 3px;
+  }
+
+  .flag {
+    width: 14px;
+    height: 11px;
+  }
+
+  .language-dropdown {
+    right: -20px;
+    min-width: 120px;
+  }
+
+  .language-option {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+    gap: 5px;
+  }
+
+  .language-option .flag {
+    width: 12px;
+    height: 9px;
+  }
+}

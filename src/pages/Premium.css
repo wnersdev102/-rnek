@@ -1,0 +1,265 @@
+.premium {
+  padding: 100px 0 80px;
+  min-height: 100vh;
+}
+
+.premium-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(138, 43, 226, 0.4);
+  box-shadow: 0 20px 40px rgba(138, 43, 226, 0.2);
+}
+
+.plan-card.popular {
+  border-color: rgba(138, 43, 226, 0.5);
+  background: rgba(138, 43, 226, 0.05);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #8a2be2 0%, #9932cc 100%);
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 0 0 12px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.plan-header {
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+
+.plan-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #9932cc;
+}
+
+.period {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+.plan-features {
+  list-style: none;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  color: #cccccc;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-item:last-child {
+  border-bottom: none;
+}
+
+.feature-icon {
+  color: #9932cc;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.plan-button {
+  width: 100%;
+  background: linear-gradient(135deg, #8a2be2 0%, #9932cc 100%);
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.plan-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(138, 43, 226, 0.4);
+}
+
+.premium-info {
+  margin-bottom: 80px;
+}
+
+.info-section {
+  text-align: center;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(138, 43, 226, 0.4);
+}
+
+.info-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.info-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.info-card p {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+.faq-section {
+  text-align: center;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(138, 43, 226, 0.4);
+}
+
+.faq-item h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #9932cc;
+  margin-bottom: 12px;
+}
+
+.faq-item p {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .premium {
+    padding: 90px 0 60px;
+  }
+  
+  .plans-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 60px;
+  }
+  
+  .plan-card {
+    padding: 25px;
+  }
+  
+  .plan-name {
+    font-size: 1.5rem;
+  }
+  
+  .price {
+    font-size: 2rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .info-card {
+    padding: 25px;
+  }
+  
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .faq-item {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-header {
+    padding-top: 15px;
+  }
+  
+  .popular-badge {
+    padding: 6px 16px;
+    font-size: 0.8rem;
+  }
+  
+  .info-icon {
+    font-size: 2.5rem;
+  }
+}

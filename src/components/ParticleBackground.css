@@ -1,0 +1,121 @@
+.particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Custom Cursor Effects */
+* {
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor.hover {
+  transform: scale(2);
+  background: radial-gradient(circle, rgba(138, 43, 226, 1) 0%, rgba(153, 50, 204, 0.5) 50%, transparent 70%);
+}
+
+.custom-cursor-trail {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: rgba(138, 43, 226, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects for interactive elements */
+a, button, .feature-card, .number-card, .dashboard-feature {
+  cursor: none !important;
+}
+
+a:hover, button:hover, .feature-card:hover, .number-card:hover, .dashboard-feature:hover {
+  cursor: none !important;
+}
+
+/* Morphing shapes */
+.morphing-shape {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, rgba(138, 43, 226, 0.1), rgba(153, 50, 204, 0.1));
+  border-radius: 50%;
+  animation: morph 8s ease-in-out infinite;
+  z-index: -1;
+}
+
+.morphing-shape:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.morphing-shape:nth-child(2) {
+  top: 60%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.morphing-shape:nth-child(3) {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+@keyframes morph {
+  0%, 100% {
+    border-radius: 50%;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    transform: rotate(180deg) scale(0.9);
+  }
+  75% {
+    border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+    transform: rotate(270deg) scale(1.2);
+  }
+}
+
+/* Parallax elements */
+.parallax-element {
+  position: absolute;
+  opacity: 0.1;
+  z-index: -1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.parallax-element:nth-child(odd) {
+  animation-direction: reverse;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
