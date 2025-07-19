@@ -1,5 +1,7 @@
 # EzBro Discord Bot Website
 
+Demo Site: https://eztheboss-site.vercel.app/
+
 Modern ve responsive Discord bot tanıtım sitesi. React ile geliştirilmiş, 5 dil desteği ve interaktif özellikler içerir.
 
 ## 🚀 Özellikler
