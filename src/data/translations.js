@@ -99,7 +99,107 @@ export const translations = {
     prioritySupport: 'Öncelikli Destek',
     prioritySupportDesc: 'Premium üyeler için özel destek kanalımızdan 7/24 hızlı ve öncelikli destek alın.',
     
-    faqTitle: 'Sıkça Sorulan Sorular'
+    faqTitle: 'Sıkça Sorulan Sorular',
+
+    // Privacy & Terms Pages
+    privacyTitle: 'Gizlilik Politikası',
+    privacySubtitle: 'EzBro\'nun gizlilik politikası ve veri koruma uygulamaları',
+    termsTitle: 'Kullanım Şartları',
+    termsSubtitle: 'EzBro\'yu kullanırken uymanız gereken şart ve koşullar',
+    lastUpdated: 'Son Güncelleme',
+    
+    // Privacy Policy Content
+    dataCollectionTitle: 'Veri Toplama',
+    dataCollectionDesc: 'EzBro\'yu kullanırken aşağıdaki verileri topluyoruz:',
+    dataCollection1: 'Discord kullanıcı ID\'niz ve sunucu bilgileri',
+    dataCollection2: 'Bot komutları ve kullanım istatistikleri',
+    dataCollection3: 'Sunucu ayarları ve konfigürasyonlar',
+    dataCollection4: 'Hata raporları ve performans verileri',
+    
+    dataUsageTitle: 'Veri Kullanımı',
+    dataUsageDesc: 'Topladığımız verileri şu amaçlarla kullanırız:',
+    dataUsage1: 'Bot hizmetlerini sağlamak ve geliştirmek',
+    dataUsage2: 'Kullanıcı deneyimini kişiselleştirmek',
+    dataUsage3: 'Teknik destek ve müşteri hizmetleri',
+    dataUsage4: 'Güvenlik ve dolandırıcılık önleme',
+    
+    dataSharingTitle: 'Veri Paylaşımı',
+    dataSharingDesc: 'Verilerinizi üçüncü taraflarla paylaşmıyoruz. Sadece yasal zorunluluklar durumunda gerekli otoritelerle paylaşabiliriz.',
+    
+    dataSecurityTitle: 'Veri Güvenliği',
+    dataSecurityDesc: 'Verilerinizi korumak için endüstri standardı güvenlik önlemleri kullanıyoruz. Tüm veriler şifrelenir ve güvenli sunucularda saklanır.',
+    
+    userRightsTitle: 'Kullanıcı Hakları',
+    userRightsDesc: 'KVKK kapsamında aşağıdaki haklarınız bulunmaktadır:',
+    userRights1: 'Verilerinize erişim talep etme',
+    userRights2: 'Verilerinizin düzeltilmesini isteme',
+    userRights3: 'Verilerinizin silinmesini talep etme',
+    userRights4: 'Veri işleme faaliyetlerine itiraz etme',
+    
+    cookiesTitle: 'Çerezler',
+    cookiesDesc: 'Web sitemizde kullanıcı deneyimini geliştirmek için çerezler kullanıyoruz. Çerez kullanımını tarayıcı ayarlarınızdan kontrol edebilirsiniz.',
+    
+    contactTitle: 'İletişim',
+    contactDesc: 'Gizlilik politikamız hakkında sorularınız varsa bizimle iletişime geçebilirsiniz:',
+    
+    // Terms of Service Content
+    acceptanceTitle: 'Şartların Kabulü',
+    acceptanceDesc: 'EzBro\'yu kullanarak bu kullanım şartlarını kabul etmiş sayılırsınız. Şartları kabul etmiyorsanız hizmeti kullanmayınız.',
+    
+    serviceDescTitle: 'Hizmet Açıklaması',
+    serviceDescDesc: 'EzBro, Discord sunucuları için aşağıdaki hizmetleri sunar:',
+    serviceDesc1: 'Moderasyon ve güvenlik özellikleri',
+    serviceDesc2: 'Müzik ve eğlence komutları',
+    serviceDesc3: 'Sunucu yönetimi araçları',
+    serviceDesc4: 'Özelleştirilebilir bot ayarları',
+    
+    userObligationsTitle: 'Kullanıcı Yükümlülükleri',
+    userObligationsDesc: 'EzBro\'yu kullanırken aşağıdaki kurallara uymalısınız:',
+    userObligation1: 'Discord\'un hizmet şartlarına uymak',
+    userObligation2: 'Botu kötüye kullanmamak',
+    userObligation3: 'Spam veya zararlı içerik üretmemek',
+    userObligation4: 'Diğer kullanıcıların haklarına saygı göstermek',
+    userObligation5: 'Yasal olmayan faaliyetlerde kullanmamak',
+    
+    prohibitedUsesTitle: 'Yasaklı Kullanımlar',
+    prohibitedUsesDesc: 'Aşağıdaki kullanımlar kesinlikle yasaktır:',
+    prohibitedUse1: 'Spam, taciz veya nefret söylemi',
+    prohibitedUse2: 'Telif hakkı ihlali',
+    prohibitedUse3: 'Dolandırıcılık veya aldatma',
+    prohibitedUse4: 'Zararlı yazılım dağıtımı',
+    prohibitedUse5: 'Hizmetin istikrarını bozucu faaliyetler',
+    
+    intellectualPropertyTitle: 'Fikri Mülkiyet',
+    intellectualPropertyDesc: 'EzBro ve tüm ilgili materyaller EzBro ekibinin fikri mülkiyetidir. İzinsiz kullanım yasaktır.',
+    
+    disclaimerTitle: 'Sorumluluk Reddi',
+    disclaimerDesc: 'EzBro "olduğu gibi" sunulur. Hizmetin kesintisiz veya hatasız olacağına dair garanti vermiyoruz.',
+    
+    limitationTitle: 'Sorumluluk Sınırlaması',
+    limitationDesc: 'EzBro ekibi, hizmetin kullanımından doğabilecek zararlardan sorumlu değildir.',
+    
+    terminationTitle: 'Hizmetin Sonlandırılması',
+    terminationDesc: 'Bu şartları ihlal etmeniz durumunda hizmet erişiminiz sonlandırılabilir.',
+    
+    changesTitle: 'Şartlarda Değişiklik',
+    changesDesc: 'Bu şartları önceden haber vermeksizin değiştirme hakkımızı saklı tutarız.',
+
+    // Footer
+    footerDescription: 'Discord için güçlü ve kullanışlı bot. Moderasyon, müzik, eğlence ve daha fazlası.',
+    footerLinksTitle: 'Bağlantılar',
+    footerLegalTitle: 'Yasal',
+    footerSupportTitle: 'Destek',
+    privacyPolicy: 'Gizlilik Politikası',
+    termsOfService: 'Kullanım Şartları',
+    contact: 'İletişim',
+    legal: 'Hukuki',
+    supportServer: 'Destek Sunucusu',
+    emailSupport: 'E-posta Desteği',
+    documentation: 'Dokümantasyon',
+    status: 'Durum',
+    allRightsReserved: 'Tüm hakları saklıdır.',
+    madeWith: 'Yapıldı',
+    by: 'tarafından'
   },
   
   en: {
@@ -202,9 +302,110 @@ export const translations = {
     prioritySupport: 'Priority Support',
     prioritySupportDesc: 'Get fast and priority support 24/7 from our special support channel for premium members.',
     
-    faqTitle: 'Frequently Asked Questions'
+    faqTitle: 'Frequently Asked Questions',
+
+    // Privacy & Terms Pages
+    privacyTitle: 'Privacy Policy',
+    privacySubtitle: 'EzBro\'s privacy policy and data protection practices',
+    termsTitle: 'Terms of Service',
+    termsSubtitle: 'Terms and conditions you must follow when using EzBro',
+    lastUpdated: 'Last Updated',
+    
+    // Privacy Policy Content
+    dataCollectionTitle: 'Data Collection',
+    dataCollectionDesc: 'When using EzBro, we collect the following data:',
+    dataCollection1: 'Your Discord user ID and server information',
+    dataCollection2: 'Bot commands and usage statistics',
+    dataCollection3: 'Server settings and configurations',
+    dataCollection4: 'Error reports and performance data',
+    
+    dataUsageTitle: 'Data Usage',
+    dataUsageDesc: 'We use the collected data for the following purposes:',
+    dataUsage1: 'Providing and improving bot services',
+    dataUsage2: 'Personalizing user experience',
+    dataUsage3: 'Technical support and customer service',
+    dataUsage4: 'Security and fraud prevention',
+    
+    dataSharingTitle: 'Data Sharing',
+    dataSharingDesc: 'We do not share your data with third parties. We may only share with necessary authorities in case of legal obligations.',
+    
+    dataSecurityTitle: 'Data Security',
+    dataSecurityDesc: 'We use industry-standard security measures to protect your data. All data is encrypted and stored on secure servers.',
+    
+    userRightsTitle: 'User Rights',
+    userRightsDesc: 'Under GDPR, you have the following rights:',
+    userRights1: 'Request access to your data',
+    userRights2: 'Request correction of your data',
+    userRights3: 'Request deletion of your data',
+    userRights4: 'Object to data processing activities',
+    
+    cookiesTitle: 'Cookies',
+    cookiesDesc: 'We use cookies on our website to improve user experience. You can control cookie usage from your browser settings.',
+    
+    contactTitle: 'Contact',
+    contactDesc: 'If you have questions about our privacy policy, you can contact us:',
+    
+    // Terms of Service Content
+    acceptanceTitle: 'Acceptance of Terms',
+    acceptanceDesc: 'By using EzBro, you are deemed to have accepted these terms of use. If you do not accept the terms, do not use the service.',
+    
+    serviceDescTitle: 'Service Description',
+    serviceDescDesc: 'EzBro provides the following services for Discord servers:',
+    serviceDesc1: 'Moderation and security features',
+    serviceDesc2: 'Music and entertainment commands',
+    serviceDesc3: 'Server management tools',
+    serviceDesc4: 'Customizable bot settings',
+    
+    userObligationsTitle: 'User Obligations',
+    userObligationsDesc: 'When using EzBro, you must comply with the following rules:',
+    userObligation1: 'Comply with Discord\'s terms of service',
+    userObligation2: 'Do not abuse the bot',
+    userObligation3: 'Do not create spam or harmful content',
+    userObligation4: 'Respect other users\' rights',
+    userObligation5: 'Do not use for illegal activities',
+    
+    prohibitedUsesTitle: 'Prohibited Uses',
+    prohibitedUsesDesc: 'The following uses are strictly prohibited:',
+    prohibitedUse1: 'Spam, harassment or hate speech',
+    prohibitedUse2: 'Copyright infringement',
+    prohibitedUse3: 'Fraud or deception',
+    prohibitedUse4: 'Malware distribution',
+    prohibitedUse5: 'Activities that disrupt service stability',
+    
+    intellectualPropertyTitle: 'Intellectual Property',
+    intellectualPropertyDesc: 'EzBro and all related materials are the intellectual property of the EzBro team. Unauthorized use is prohibited.',
+    
+    disclaimerTitle: 'Disclaimer',
+    disclaimerDesc: 'EzBro is provided "as is". We do not guarantee that the service will be uninterrupted or error-free.',
+    
+    limitationTitle: 'Limitation of Liability',
+    limitationDesc: 'The EzBro team is not responsible for damages that may arise from the use of the service.',
+    
+    terminationTitle: 'Service Termination',
+    terminationDesc: 'Your service access may be terminated if you violate these terms.',
+    
+    changesTitle: 'Changes to Terms',
+    changesDesc: 'We reserve the right to change these terms without prior notice.',
+
+    // Footer
+    footerDescription: 'Powerful and useful bot for Discord. Moderation, music, entertainment and more.',
+    footerLinksTitle: 'Links',
+    footerLegalTitle: 'Legal',
+    footerSupportTitle: 'Support',
+    privacyPolicy: 'Privacy Policy',
+    termsOfService: 'Terms of Service',
+    contact: 'Contact',
+    legal: 'Legal',
+    supportServer: 'Support Server',
+    emailSupport: 'Email Support',
+    documentation: 'Documentation',
+    status: 'Status',
+    allRightsReserved: 'All rights reserved.',
+    madeWith: 'Made with',
+    by: 'by'
   },
   
+  // Diğer diller için de aynı şekilde eklenecek...
   az: {
     // Header
     home: 'Ana Səhifə',
@@ -305,7 +506,24 @@ export const translations = {
     prioritySupport: 'Prioritet Dəstək',
     prioritySupportDesc: 'Premium üzvlər üçün xüsusi dəstək kanalımızdan 7/24 sürətli və prioritet dəstək alın.',
     
-    faqTitle: 'Tez-tez Verilən Suallar'
+    faqTitle: 'Tez-tez Verilən Suallar',
+
+    // Footer
+    footerDescription: 'Discord üçün güclü və faydalı bot. Moderasiya, musiqi, əyləncə və daha çoxu.',
+    footerLinksTitle: 'Bağlantılar',
+    footerLegalTitle: 'Hüquqi',
+    footerSupportTitle: 'Dəstək',
+    privacyPolicy: 'Məxfilik Siyasəti',
+    termsOfService: 'İstifadə Şərtləri',
+    contact: 'Əlaqə',
+    legal: 'Hüquqi',
+    supportServer: 'Dəstək Serveri',
+    emailSupport: 'E-poçt Dəstəyi',
+    documentation: 'Sənədlər',
+    status: 'Status',
+    allRightsReserved: 'Bütün hüquqlar qorunur.',
+    madeWith: 'İlə hazırlandı',
+    by: 'tərəfindən'
   },
   
   ru: {
@@ -408,7 +626,24 @@ export const translations = {
     prioritySupport: 'Приоритетная поддержка',
     prioritySupportDesc: 'Получайте быструю и приоритетную поддержку 24/7 из нашего специального канала поддержки для премиум участников.',
     
-    faqTitle: 'Часто задаваемые вопросы'
+    faqTitle: 'Часто задаваемые вопросы',
+
+    // Footer
+    footerDescription: 'Мощный и полезный бот для Discord. Модерация, музыка, развлечения и многое другое.',
+    footerLinksTitle: 'Ссылки',
+    footerLegalTitle: 'Правовая информация',
+    footerSupportTitle: 'Поддержка',
+    privacyPolicy: 'Политика конфиденциальности',
+    termsOfService: 'Условия использования',
+    contact: 'Контакты',
+    legal: 'Правовая информация',
+    supportServer: 'Сервер поддержки',
+    emailSupport: 'Поддержка по электронной почте',
+    documentation: 'Документация',
+    status: 'Статус',
+    allRightsReserved: 'Все права защищены.',
+    madeWith: 'Сделано с',
+    by: 'от'
   },
   
   de: {
@@ -511,6 +746,23 @@ export const translations = {
     prioritySupport: 'Prioritäts-Support',
     prioritySupportDesc: 'Erhalten Sie schnellen und prioritären Support 24/7 von unserem speziellen Support-Kanal für Premium-Mitglieder.',
     
-    faqTitle: 'Häufig gestellte Fragen'
+    faqTitle: 'Häufig gestellte Fragen',
+
+    // Footer
+    footerDescription: 'Leistungsstarker und nützlicher Bot für Discord. Moderation, Musik, Unterhaltung und mehr.',
+    footerLinksTitle: 'Links',
+    footerLegalTitle: 'Rechtliches',
+    footerSupportTitle: 'Support',
+    privacyPolicy: 'Datenschutzrichtlinie',
+    termsOfService: 'Nutzungsbedingungen',
+    contact: 'Kontakt',
+    legal: 'Rechtliches',
+    supportServer: 'Support-Server',
+    emailSupport: 'E-Mail-Support',
+    documentation: 'Dokumentation',
+    status: 'Status',
+    allRightsReserved: 'Alle Rechte vorbehalten.',
+    madeWith: 'Gemacht mit',
+    by: 'von'
   }
 };
