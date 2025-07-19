@@ -1,0 +1,210 @@
+/* Ana cursor gizle */
+* {
+  cursor: none !important;
+}
+
+/* Magic Cursor Ana Tasarım */
+.magic-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
+/* Cursor Core - Ana nokta */
+.cursor-core {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #8a2be2, #9932cc, #ff6b6b);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.8);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Cursor Glow - Işık efekti */
+.cursor-glow {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.3) 0%, rgba(138, 43, 226, 0.1) 50%, transparent 70%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* Cursor Ring - Dış halka */
+.cursor-ring {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(138, 43, 226, 0.4);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 4s linear infinite;
+}
+
+/* Hover durumu */
+.magic-cursor.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.magic-cursor.hover .cursor-core {
+  background: linear-gradient(135deg, #ff6b6b, #ffd93d, #6bcf7f);
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.8);
+  animation: pulse-fast 0.8s ease-in-out infinite;
+}
+
+.magic-cursor.hover .cursor-glow {
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.4) 0%, rgba(255, 107, 107, 0.2) 50%, transparent 70%);
+  animation: glow-intense 1.5s ease-in-out infinite alternate;
+}
+
+.magic-cursor.hover .cursor-ring {
+  border-color: rgba(255, 107, 107, 0.6);
+  animation: rotate-fast 2s linear infinite;
+}
+
+/* Click durumu */
+.magic-cursor.click {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.magic-cursor.click .cursor-core {
+  background: linear-gradient(135deg, #00f5ff, #0080ff, #8a2be2);
+  box-shadow: 0 0 25px rgba(0, 245, 255, 1);
+  animation: click-pulse 0.3s ease-out;
+}
+
+/* Trail efekti */
+.magic-cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.6), rgba(153, 50, 204, 0.4));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: trail-fade 0.5s ease-out forwards;
+}
+
+/* Animasyonlar */
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse-fast {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0.9;
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes glow-intense {
+  0% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate-fast {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes click-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 25px rgba(0, 245, 255, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.8);
+    box-shadow: 0 0 35px rgba(0, 245, 255, 1), 0 0 50px rgba(138, 43, 226, 0.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 25px rgba(0, 245, 255, 1);
+  }
+}
+
+@keyframes trail-fade {
+  0% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+}
+
+/* Mobil cihazlarda cursor'ı gizle */
+@media (max-width: 768px) {
+  .magic-cursor,
+  .magic-cursor-trail {
+    display: none;
+  }
+  
+  * {
+    cursor: auto !important;
+  }
+}
+
+/* Özel durumlar için cursor göster */
+input, textarea, select {
+  cursor: text !important;
+}
+
+@media (min-width: 769px) {
+  input, textarea, select {
+    cursor: none !important;
+  }
+}

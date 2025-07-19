@@ -3,100 +3,163 @@ import './ParticleBackground.css';
 
 const ParticleBackground = () => {
   const canvasRef = useRef(null);
+  const animationRef = useRef(null);
+  const particlesRef = useRef([]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    let animationFrameId;
-
+    
     // Canvas boyutunu ayarla
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-
+    
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Parçacık sınıfı
-    class Particle {
+    // Kar tanesi sınıfı
+    class Snowflake {
       constructor() {
+        this.reset();
+        this.y = Math.random() * canvas.height; // İlk pozisyon rastgele
+      }
+
+      reset() {
         this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 0.5;
-        this.vy = (Math.random() - 0.5) * 0.5;
-        this.size = Math.random() * 2 + 1;
-        this.opacity = Math.random() * 0.5 + 0.2;
+        this.y = -10;
+        this.size = Math.random() * 4 + 1; // 1-5px arası boyut
+        this.speed = Math.random() * 2 + 0.5; // Düşme hızı
+        this.drift = Math.random() * 2 - 1; // Yatay hareket
+        this.opacity = Math.random() * 0.8 + 0.2; // Şeffaflık
+        this.rotation = Math.random() * 360; // Dönüş açısı
+        this.rotationSpeed = (Math.random() - 0.5) * 2; // Dönüş hızı
       }
 
       update() {
-        this.x += this.vx;
-        this.y += this.vy;
+        this.y += this.speed;
+        this.x += this.drift * 0.5;
+        this.rotation += this.rotationSpeed;
 
-        // Ekran sınırlarında geri dön
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        // Ekrandan çıktıysa yukarıdan başlat
+        if (this.y > canvas.height + 10) {
+          this.reset();
+        }
 
-        // Opacity animasyonu
-        this.opacity += (Math.random() - 0.5) * 0.01;
-        this.opacity = Math.max(0.1, Math.min(0.7, this.opacity));
+        // Yanlara çıktıysa karşı taraftan getir
+        if (this.x > canvas.width + 10) {
+          this.x = -10;
+        } else if (this.x < -10) {
+          this.x = canvas.width + 10;
+        }
       }
 
       draw() {
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation * Math.PI / 180);
+
+        // Kar tanesi çiz (yıldız şekli)
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(138, 43, 226, ${this.opacity})`;
+        ctx.fillStyle = '#ffffff';
+        
+        // Ana yıldız şekli
+        for (let i = 0; i < 6; i++) {
+          const angle = (i * Math.PI) / 3;
+          const x1 = Math.cos(angle) * this.size;
+          const y1 = Math.sin(angle) * this.size;
+          const x2 = Math.cos(angle + Math.PI / 6) * (this.size * 0.5);
+          const y2 = Math.sin(angle + Math.PI / 6) * (this.size * 0.5);
+          
+          if (i === 0) {
+            ctx.moveTo(x1, y1);
+          } else {
+            ctx.lineTo(x1, y1);
+          }
+          ctx.lineTo(x2, y2);
+        }
+        
+        ctx.closePath();
         ctx.fill();
+
+        // Merkez nokta
+        ctx.beginPath();
+        ctx.arc(0, 0, this.size * 0.3, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.restore();
       }
     }
 
-    // Parçacıkları oluştur
-    const particles = [];
-    const particleCount = 50;
-
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
-    }
+    // Partikülleri oluştur
+    const createParticles = () => {
+      const particleCount = Math.min(150, Math.floor(canvas.width * canvas.height / 8000));
+      particlesRef.current = [];
+      
+      for (let i = 0; i < particleCount; i++) {
+        particlesRef.current.push(new Snowflake());
+      }
+    };
 
     // Animasyon döngüsü
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      particles.forEach(particle => {
+      // Gradient arka plan
+      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      gradient.addColorStop(0, 'rgba(26, 11, 46, 0.1)');
+      gradient.addColorStop(0.5, 'rgba(22, 33, 62, 0.05)');
+      gradient.addColorStop(1, 'rgba(15, 52, 96, 0.1)');
+      
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Kar tanelerini güncelle ve çiz
+      particlesRef.current.forEach(particle => {
         particle.update();
         particle.draw();
       });
 
-      // Parçacıklar arası bağlantı çizgileri
-      particles.forEach((particle, i) => {
-        particles.slice(i + 1).forEach(otherParticle => {
-          const dx = particle.x - otherParticle.x;
-          const dy = particle.y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 100) {
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(138, 43, 226, ${0.1 * (1 - distance / 100)})`;
-            ctx.lineWidth = 1;
-            ctx.stroke();
-          }
-        });
-      });
-
-      animationFrameId = requestAnimationFrame(animate);
+      animationRef.current = requestAnimationFrame(animate);
     };
 
+    createParticles();
     animate();
+
+    // Resize olduğunda partikülleri yeniden oluştur
+    const handleResize = () => {
+      resizeCanvas();
+      createParticles();
+    };
+
+    window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('resize', handleResize);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="particle-canvas" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className="particle-background"
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: -1,
+        pointerEvents: 'none',
+      }}
+    />
+  );
 };
 
 export default ParticleBackground;
