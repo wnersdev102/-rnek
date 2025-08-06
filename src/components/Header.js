@@ -16,7 +16,7 @@ const Header = () => {
         <div className="header-content">
           <Link to="/" className="logo">
             <img src="/logo.png" alt="Rxmlo" className="logo-image" />
-            <span className="logo-text">EzBro</span>
+            <span className="logo-text">Rxmlo</span>
           </Link>
           
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
