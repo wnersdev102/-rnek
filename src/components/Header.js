@@ -15,7 +15,7 @@ const Header = () => {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <img src="/logo.png" alt="EzBro" className="logo-image" />
+            <img src="/logo.png" alt="Rxmlo" className="logo-image" />
             <span className="logo-text">EzBro</span>
           </Link>
           
@@ -27,7 +27,7 @@ const Header = () => {
 
           <div className="header-actions">
             <LanguageSelector />
-            <a href="https://discord.com/api/oauth2/authorize?client_id=YOUR_BOT_ID&permissions=8&scope=bot" className="invite-button">{t.invite}</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=1279071496983281758&permissions=8&integration_type=0&scope=bot+applications.commands" className="invite-button">{t.invite}</a>
             <button 
               className="menu-toggle"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
