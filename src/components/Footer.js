@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <img src="/logo.png" alt="EzBro" className="footer-logo-image" />
+              <img src="/logo.png" alt="Rxmlo" className="footer-logo-image" />
               <span className="footer-logo-text">EzBro</span>
             </div>
             <p className="footer-description">
@@ -45,7 +45,7 @@ const Footer = () => {
               <li><Link to="/">{t.home}</Link></li>
               <li><Link to="/komutlar">{t.commands}</Link></li>
               <li><Link to="/premium">{t.premium}</Link></li>
-              <li><a href="https://discord.com/api/oauth2/authorize?client_id=YOUR_BOT_ID&permissions=8&scope=bot">{t.invite}</a></li>
+              <li><a href="https://discord.com/oauth2/authorize?client_id=1279071496983281758&permissions=8&integration_type=0&scope=bot+applications.commands">{t.invite}</a></li>
             </ul>
           </div>
 
