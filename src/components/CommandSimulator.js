@@ -10,8 +10,8 @@ const CommandSimulator = () => {
 
   const botCommands = {
     '/help': {
-      tr: 'Merhaba! Ben EzBro. İşte kullanabileceğin komutlar:\n/ban - Kullanıcı yasakla\n/kick - Kullanıcı at\n/mute - Kullanıcı sustur\n/play - Müzik çal',
-      en: 'Hello! I\'m EzBro. Here are the commands you can use:\n/ban - Ban user\n/kick - Kick user\n/mute - Mute user\n/play - Play music'
+      tr: 'Merhaba! Ben Rxmlo Site İçi Örnek Komutlar;\n/ban - Kullanıcı yasakla\n/kick - Kullanıcı at\n/mute - Kullanıcı sustur\n/play - Müzik çal',
+      en: 'Hello! I\'m Rxmlo. Here are the commands you can use:\n/ban - Ban user\n/kick - Kick user\n/mute - Mute user\n/play - Play music'
     },
     '/ban': {
       tr: '🔨 Kullanıcı başarıyla yasaklandı!',
@@ -41,8 +41,8 @@ const CommandSimulator = () => {
       {
         type: 'bot',
         content: currentLanguage === 'tr' 
-          ? '👋 Merhaba! Ben EzBro. Komutları test etmek için /help yazabilirsin!'
-          : '👋 Hello! I\'m EzBro. You can type /help to test commands!',
+          ? '👋 Merhaba! Ben Rxmlo. Komutları test etmek için /help yazabilirsin!'
+          : '👋 Hello! I\'m Rxmlo. You can type /help to test commands!',
         timestamp: new Date()
       }
     ]);
@@ -93,7 +93,7 @@ const CommandSimulator = () => {
       <div className="simulator-header">
         <div className="bot-avatar">🤖</div>
         <div className="bot-info">
-          <h4>EzBro Bot</h4>
+          <h4>Rxmlo</h4>
           <span className="status online">● Online</span>
         </div>
       </div>
